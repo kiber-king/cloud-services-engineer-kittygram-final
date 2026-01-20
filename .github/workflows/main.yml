@@ -134,7 +134,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            ✅ Деплой Kittygram успешно завершён!
+            Деплой Kittygram успешно завершён!
             
             Репозиторий: ${{ github.repository }}
             Автор: ${{ github.actor }}
