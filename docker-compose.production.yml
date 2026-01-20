@@ -13,7 +13,7 @@ services:
     restart: always
 
   backend:
-    image: kiberking/kittygram_backend
+    image: ${DOCKER_USERNAME}/kittygram_backend
     container_name: backend
     env_file: .env
     volumes:
@@ -24,7 +24,7 @@ services:
     restart: always
 
   frontend:
-    image: kiberking/kittygram_frontend
+    image: ${DOCKER_USERNAME}/kittygram_frontend
     container_name: frontend
     volumes:
       - static:/app/result_build
@@ -33,7 +33,7 @@ services:
       - backend
 
   gateway:
-    image: kiberking/kittygram_gateway
+    image: ${DOCKER_USERNAME}/kittygram_gateway
     container_name: gateway
     ports:
       - "9000:80"
