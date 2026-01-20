@@ -17,7 +17,7 @@ services:
     container_name: backend
     env_file: .env
     volumes:
-      - static:/app/collected_static
+      - static:/static
       - media:/app/media
     depends_on:
       - db
@@ -27,8 +27,8 @@ services:
     image: ${DOCKER_USERNAME}/kittygram_frontend
     container_name: frontend
     volumes:
-      - static:/app/result_build
-    command: cp -r /app/build/. /app/result_build/
+      - static:/static
+    command: cp -r /app/build/. /static/
     depends_on:
       - backend
 
